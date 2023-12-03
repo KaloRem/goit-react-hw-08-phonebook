@@ -13,10 +13,6 @@ const token = {
   },
 };
 
-/*
- * POST @ /users/signup
- * body: { name, email, password }
- */
 const register = createAsyncThunk('auth/register', async credentials => {
   try {
     const { data } = await axios.post('/users/signup', credentials);
@@ -27,10 +23,6 @@ const register = createAsyncThunk('auth/register', async credentials => {
   }
 });
 
-/*
- * POST @ /users/login
- * body: { email, password }
- */
 const logIn = createAsyncThunk('auth/login', async credentials => {
   try {
     const { data } = await axios.post('/users/login', credentials);
@@ -43,10 +35,6 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
   }
 });
 
-/*
- * POST @ /users/logout
- * headers: Authorization: Bearer token
- */
 const logOut = createAsyncThunk('auth/logout', async () => {
   try {
     await axios.post('/users/logout');
@@ -55,11 +43,7 @@ const logOut = createAsyncThunk('auth/logout', async () => {
     toast.error(`Sorry, something went wrong, please try again.`);
   }
 });
-/*
- * GET @ /users/current
- * headers:
- *    Authorization: Bearer token
- */
+
 const fetchCurrentUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {

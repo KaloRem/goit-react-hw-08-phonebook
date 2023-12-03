@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { authOperations } from 'redux/auth/auth-operations';
 
 export const LoginForm = () => {
-  // ----controlled form
+
   const emailInputId = nanoid();
   const passwordInputId = nanoid();
 
@@ -26,8 +26,7 @@ export const LoginForm = () => {
         return;
     }
   };
-  // ----
-  // ----form submit
+
   const dispatch = useDispatch();
   const handleSubmit = e => {
     e.preventDefault();
@@ -40,7 +39,6 @@ export const LoginForm = () => {
     setEmail('');
     setPassword('');
   };
-  // ----
 
   return (
     <FormWrapper onSubmit={handleSubmit}>

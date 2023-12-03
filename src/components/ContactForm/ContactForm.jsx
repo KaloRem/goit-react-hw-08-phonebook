@@ -15,7 +15,6 @@ import { selectContacts } from 'redux/contacts/contacts-selectors';
 import { checkName } from 'service-functions';
 
 export const ContactForm = () => {
-  // ----controlled form
   const nameInputId = nanoid();
   const numberInputId = nanoid();
   const [name, setName] = useState('');
@@ -34,8 +33,7 @@ export const ContactForm = () => {
         return;
     }
   };
-  // ----
-  // ----form submit
+
   const contactItems = useSelector(selectContacts);
   const dispatch = useDispatch();
 
@@ -55,7 +53,6 @@ export const ContactForm = () => {
     setName('');
     setNumber('');
   };
-  // ----
 
   return (
     <FormWrapper onSubmit={handleSubmit}>
