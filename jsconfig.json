@@ -2,5 +2,11 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/redux/contacts",
+    "DRAFT/Loader",
+    "src/components/Contact",
+    "DRAFT/ContactForm"
+  ]
 }
