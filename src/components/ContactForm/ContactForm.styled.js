@@ -6,14 +6,17 @@ export const FormWrapper = styled.form`
   width: 400px;
   padding: 12px;
   border: 3px solid;
-  border-radius: 4px;
+  border-radius: 15px;
   margin: 40px auto 0;
+  background: radial-gradient(circle at 24.1% 68.8%, #323232 0, #000 99.4%);
 `;
 
 export const NameLabel = styled.label`
   display: flex;
   flex-direction: column;
   font-size: 20px;
+  font-weight: bold;
+  color: white;
 `;
 
 export const NameInput = styled.input`
@@ -23,11 +26,12 @@ export const NameInput = styled.input`
   cursor: pointer;
   border: 1px solid black;
   margin-bottom: 16px;
+  border-radius: 5px;
 
   &:focus {
     outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 3px 0 #3498db inset, 0 0 3px 2px #3498db;
+    border-color: red;
+    box-shadow: 0 0 3px 0 red inset, 0 0 3px 2px red;
   }
 `;
 
@@ -35,6 +39,8 @@ export const NumberLabel = styled.label`
   display: flex;
   flex-direction: column;
   font-size: 20px;
+  font-weight: bold;
+  color: white;
 `;
 
 export const NumberInput = styled.input`
@@ -44,11 +50,12 @@ export const NumberInput = styled.input`
   font: inherit;
   cursor: pointer;
   border: 1px solid black;
+  border-radius: 5px;
 
   &:focus {
     outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 3px 0 #3498db inset, 0 0 3px 2px #3498db;
+    border-color: red;
+    box-shadow: 0 0 3px 0 red inset, 0 0 3px 2px red;
   }
 `;
 
@@ -59,13 +66,17 @@ export const SubmitBtn = styled.button`
   border-radius: 4px;
   font-size: 20px;
   border: none;
-  color: #fff;
-  background: #3498db;
+  color: white;
+  background: linear-gradient(
+    98.3deg,
+    rgb(0, 0, 0) 10.6%,
+    rgb(255, 0, 0) 97.7%
+  );
   transition: all 150ms ease-in-out;
 
   &:hover {
-    color: transparent;
-    text-shadow: 0 0 2px #fff;
-    box-shadow: 0 0 3px 0 #3498db inset, 0 0 3px 2px #3498db;
+    color: white;
+    text-shadow: 0 0 2px black;
+    box-shadow: 0 0 3px 0 black inset, 0 0 3px 2px black;
   }
 `;

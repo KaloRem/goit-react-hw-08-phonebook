@@ -7,5 +7,6 @@ export const Header = styled.header`
   gap: 12px;
   padding: 8px 0;
   margin-bottom: 16px;
-  border-bottom: 1px solid red;
+  border-bottom: 3px solid red;
+  border-radius: 8px;
 `;

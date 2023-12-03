@@ -6,7 +6,7 @@ export const FormWrapper = styled.form`
   width: 400px;
   padding: 12px;
   border: 3px solid;
-  border-radius: 4px;
+  border-radius: 15px;
   margin: 40px auto 0;
   background: radial-gradient(circle at 24.1% 68.8%, #323232 0, #000 99.4%);
 `;
